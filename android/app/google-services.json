@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "862827104966",
+    "project_id": "visual-impaired-b2460",
+    "storage_bucket": "visual-impaired-b2460.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862827104966:android:6cde7ed11418611d27e5c7",
+        "android_client_info": {
+          "package_name": "com.example.visual_impaired"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1FdWPivouhLIX6LpCO3wUtJXuPQnyUdw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

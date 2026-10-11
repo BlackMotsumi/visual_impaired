@@ -1,0 +1,34 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ============================================
+    // STUDY GROUPS
+    // ============================================
+    // Only authenticated Vision Guide users can
+    // read study groups.
+    //
+    // This allows:
+    // - StudyGroupsScreen .get()
+    // - StudyGroupsScreen .snapshots()
+    //
+    match /study_groups/{groupId} {
+      allow read: if request.auth != null;
+
+      // We will secure creating/updating/deleting
+      // study groups separately.
+      allow create, update, delete: if false;
+    }
+
+    // ============================================
+    // DEFAULT DENY
+    // ============================================
+    // Any collection that we have not explicitly
+    // given permission to access is denied.
+    //
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
